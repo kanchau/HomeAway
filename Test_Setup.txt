@@ -1,0 +1,10 @@
+Test Setup:
+
+1. Create a new project in Eclipse IDE and create a new src folder
+2. Create two packages com.kanch.ObjectRepo, com.kanch.TestCases under src folder.
+3. Place all the ObjRepo files under com.kanch.ObjectRepo and all the TestCases files under com.kanch.TestCases
+4. Add testng.xml file under src folder
+5. Add all the Selenium jars and TestNG jar files.
+6. Run testng.xml file as Run As->TestNG Suite.
+
+Above script was tested on Mozilla firefox 43.0.4.
