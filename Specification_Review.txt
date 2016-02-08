@@ -1,0 +1,59 @@
+Questions regarding specification:
+
+"Only writable users should be able to edit their profile"
+
+1. Is it possible for the readable users to edit their profile?
+2. Is it possible for the read-write users to edit their profile?
+3. "Edit their profile" does mean editing all the fields in the profile? Are there any non-editable field too?
+
+"As a User, I can edit only my own profile"
+
+1. Is it possible for users to view others profile eventhough they can't edit.
+2. What should be the behaviour if the users try to edit other users profile?
+
+"As a CSR, I can edit any user"
+
+1. What basic information does a CSR need to know to edit users profile?
+
+"Edit profile and change password should have the same behaviour for a user editing his/her profile and a CSR editing a profile"
+
+1. Does this means user editing his/her profile and CSR editing his/her profile? Or CSR editing other users profile.
+
+Login page:
+1. How many times of Login retries can be allowed if the user can't get it right every time?
+2. Will the CSR be logging in as the user using his account details? Or he would be logging in as CSR and has an access to
+edit other users profile?
+
+Link Location Page:
+1. Is the link location page remains the same when logged in as a User and as a CSR or is it different for the two?
+
+Profile Page:
+1. Is all the fields displayed in the profile page will be displayed to CSR also when he edits other users?
+
+Edit Profile Page:
+1. Which fields are required to be made mandatory as none of the fields seems to be mandatory?
+2. Is it possible for CSR to change photo of the user he is trying to edit?
+3. What should be the validations for each field while editing a profile?
+
+Settings Page:
+1. Will it be possible for the CSR to deactivate other users profile?
+
+Reset Password:
+1. What if the passwords doesn't match and what type of messages to be displayed?
+2. How many attempts to be provided for a password change?
+3. Can CSR change other users passwords? Is the attempt to change users password by CSR has any limits?
+ 
+
+I would like to ask Product Manager the following questions:
+1. Which fields are required to be made mandatory as none of the fields seems to be mandatory?
+        Without making even a single field mandatory, there is a high chance that lot of empty profiles will get created 
+   and making further changes on them is also not possible.
+
+2. Will the CSR be logging in as the user using his account details? Or he would be logging in as CSR and has an access to
+edit other users profile?
+	It is important to understand how the CSR can edit the profile of other users and what all information is required 
+   for him/her to proceed further.
+
+3. Will it be possible for the CSR to deactivate other users profile?
+	CSR has been given permission to edit other users profile, but it is not clear whether he/she can deactivate users
+   profile from the specification.

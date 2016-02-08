@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Automation Test">
+	<test name="DemoQA testcases">
+		<classes>
+			<class name="com.kanch.TestCases.TestSuite"/>
+			<class name="com.kanch.TestCases.Iphone"/>
+			<class name="com.kanch.TestCases.AccountDetails"/>
+			<class name="com.kanch.TestCases.RemoveFromCart"/>
+		</classes>
+	</test>
+
+
+</suite>

@@ -1,0 +1,53 @@
+
+//Two different users and PermissionToModifyRecipients set to false
+User user1 = new User("Ryan");
+User user2 = new User("Joy");
+user1.setHasPermissionToModifyRecipients(false);
+Message goodMessage = new Message("Test 1");
+Message badMessage = mew Message("Test 2");
+goodMessage.setAddRecipientAllowed(user2,true);
+badMessage.setAddRecipientAllowed(user2,false);
+ArrayList<Message> messages = new ArrayList<Message>();
+messages.add(goodMessage);
+messages.add(badMessage);
+assertEquals(messages.size(),2);
+ArrayList<Message> result = rec.addRecipientToAllMessages(messages,user1,user2);
+//Assert that two messages should fail ideally.
+//But this testcase fails. But both the messages are added successfully
+assertEquals(messages.size(),2);
+
+
+//One admin user but PermissionToModifyRecipient set to false
+User user = new User("admin");
+user.setHasPermissionToModifyRecipients(false);
+Message goodMessage = new Message("Test 1");
+Message badMessage = mew Message("Test 2");
+goodMessage.setAddRecipientAllowed(user,true);
+badMessage.setAddRecipientAllowed(user,false);
+ArrayList<Message> messages = new ArrayList<Message>();
+messages.add(goodMessage);
+messages.add(badMessage);
+assertEquals(messages.size(),2);
+ArrayList<Message> result = rec.addRecipientToAllMessages(messages,user,user);
+//Assert that two messages should fail ideally. But only one message will fail
+//So, this testcase fails
+assertEquals(messages.size(),2);
+
+//Two different users and PermissionToModifyRecipients Set to true
+User user1 = new User("Ryan");
+User user2 = new User("Joy");
+user1.setHasPermissionToModifyRecipients(true);
+Message goodMessage = new Message("Test 1");
+Message badMessage = mew Message("Test 2");
+goodMessage.setAddRecipientAllowed(user2,true);
+badMessage.setAddRecipientAllowed(user2,false);
+ArrayList<Message> messages = new ArrayList<Message>();
+messages.add(goodMessage);
+messages.add(badMessage);
+assertEquals(messages.size(),2);
+ArrayList<Message> result = rec.addRecipientToAllMessages(messages,user1,user2);
+//Assert that two messages should fail ideally. But only one message will fail
+//So, this testcase fails
+assertEquals(messages.size(),2);
+
+
